@@ -4,32 +4,9 @@
 #include "Raycast.h"
 #include "ScreenLog.h"
 #include "DrawDebug.h"
-RE::BSEventNotifyControl Hooks::CrosshairEventSink::ProcessEvent(const SKSE::CrosshairRefEvent* event,
-                                                                 RE::BSTEventSource<SKSE::CrosshairRefEvent>*) {
-    if (!event) {
-        return RE::BSEventNotifyControl::kContinue;
-    }
 
-    if (!event->crosshairRef) {
-        return RE::BSEventNotifyControl::kContinue;
-    }
 
-    auto ref = event->crosshairRef.get();
-
-    if (!ref) {
-        return RE::BSEventNotifyControl::kContinue;
-    }
-
-    // Manager::OnHover(ref);
-
-    return RE::BSEventNotifyControl::kContinue;
-}
-
-void Hooks::CrosshairEventSink::Install() {
-    SKSE::GetCrosshairRefEventSource()->AddEventSink(new CrosshairEventSink());
-}
 void Hooks::Install() {
-    CrosshairEventSink::Install();
     GrabEventSink::Install();
     UpdateHook::Install();
 }
