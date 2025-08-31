@@ -1,0 +1,6 @@
+{
+  "AddToStackMenu.Add": "Add to stack",
+  "RemoveFromStackMenu.RemoveOne": "Remove 1 from stack",
+  "RemoveFromStackMenu.SplitInHalf": "Split stack in half",
+  "RemoveFromStackMenu.StackCount": "Stack Count:"
+}

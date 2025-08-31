@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+  "name": "deneme",
+  "version-string": "0.1",
+  "dependencies": [
+    "rapidcsv",
+    "directxtk",
+    "nlohmann-json",
+    "spdlog",
+    "glm",
+    {
+      "name": "imgui",
+      "features": [ "dx11-binding", "win32-binding", "freetype", "wchar32" ]
+    }
+  ],
+  "overrides": [
+    {
+      "name": "fmt",
+      "version": "9.1.0"
+    }
+  ],
+  "builtin-baseline": "78b61582c9e093fda56a01ebb654be15a0033897"
+}

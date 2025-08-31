@@ -1,0 +1,32 @@
+{
+  "AddToStackMenu.Add": [
+    {
+      "device": "keyboard",
+      "key": "q"
+    },
+    {
+      "device": "gamepad",
+      "key": "x"
+    }
+  ],
+  "RemoveFromStackMenu.RemoveOne": [
+    {
+      "device": "keyboard",
+      "key": "r"
+    },
+    {
+      "device": "gamepad",
+      "key": "b"
+    }
+  ],
+  "RemoveFromStackMenu.SplitInHalf": [
+    {
+      "device": "keyboard",
+      "key": "t"
+    },
+    {
+      "device": "gamepad",
+      "key": "y"
+    }
+  ]
+}
