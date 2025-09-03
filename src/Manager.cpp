@@ -171,12 +171,20 @@ void Manager::OnRemove1FromStack() {
 }
 
 void Manager::OnGrab(RE::TESObjectREFR* ref) {
-    grabbedPtr = ref->GetHandle();
-    Prompt::ShowSplit();
+    if (auto base = ref->GetBaseObject()) {
+        if (base->IsInventoryObject()) {
+            grabbedPtr = ref->GetHandle();
+            Prompt::ShowSplit();
+        }
+    }
 }
 
-void Manager::OnRelease(RE::TESObjectREFR* ref) { 
-    Clean(); 
+void Manager::OnRelease(RE::TESObjectREFR* ref) {
+    if (auto base = ref->GetBaseObject()) {
+        if (base->IsInventoryObject()) {
+            Clean();
+        }
+    }
 }
 
 int16_t Manager::GetStackCount() {
